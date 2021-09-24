@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tree Chat</title>
+  <link rel="icon" href="Images/pine.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      margin-top: 200px;
+    }
+  </style>
+</head>
+
+<body class="text-center">
+
+  <main class="form-signin">
+    <img class="mb-4" src="Images/pine.png" alt="logo" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Tree Chat</h1>
+    <h1 class="h3 mb-3 fw-normal">Enter Your User Name (Display name)</h1>
+
+    <div class="form-floating">
+      <input type="text" style="color: darkgreen;" class="form-control p-3" id="user_name"
+        placeholder="name@example.com">
+    </div>
+    <div class="d-grid gap-2">
+      <button class="w-100 btn btn-lg btn-primary mt-3 display-2" type="submit" onclick="adduser();">Sign in</button>
+    </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyABCnaN2CP7at_U_7c9XDxoGY7V_uEhl4Y",
+      authDomain: "tree-chat-db.firebaseapp.com",
+      databaseURL: "https://tree-chat-db-default-rtdb.firebaseio.com",
+      projectId: "tree-chat-db",
+      storageBucket: "tree-chat-db.appspot.com",
+      messagingSenderId: "613108623407",
+      appId: "1:613108623407:web:74d4726c4c8d4c16073eda"
+    };
+    
+    const app = initializeApp(firebaseConfig);
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+  </script>
+  <script src="login.js"></script>
+</body>
+
+</html>
