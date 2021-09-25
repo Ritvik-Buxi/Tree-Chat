@@ -1,4 +1,5 @@
 //Firebase Database (Please Do not share this to anyone who is not a developer of this website);
+import {initializeApp} from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
 const firebaseConfig = {
   apiKey: "AIzaSyABCnaN2CP7at_U_7c9XDxoGY7V_uEhl4Y",
   authDomain: "tree-chat-db.firebaseapp.com",
