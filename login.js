@@ -8,10 +8,14 @@ const firebaseConfig = {
   messagingSenderId: "613108623407",
   appId: "1:613108623407:web:74d4726c4c8d4c16073eda"
 };
-
+const app = initializeApp(firebaseConfig);
+const database = getDatabase();
 function adduser() {
     user_name = document.getElementById("user_name").value;
     localStorage.setItem("user_name", user_name);
+    firebaseConfig.database().ref(user_name).push({
+      User_name: user_name,
+    });
     this.location = "room.html";
     // "this" is actually what you are looking at like when you are in a website it shows the window and "this" variable automatically assigns itself to window.
 }

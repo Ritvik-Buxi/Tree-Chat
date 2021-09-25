@@ -21,7 +21,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              <a class="nav-link" href="login.html">Log out</a>
+              <a class="nav-link" href="login.html" onclick="logout()">Log out</a>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@
         <p>also known as Tree chat rooms 😉</p>
         <span>Add rooms:</span>
         <input type="text" id="room_name" class="form-control m-3" placeholder="Add room name">
-        <button class="btn btn-success">Add Room</button>
+        <button class="btn btn-success" onclick="addRoom()">Add Room</button>
         <div class="output alert—check"></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
