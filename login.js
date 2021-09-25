@@ -10,10 +10,11 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const database = getDatabase();
+var db = firebase.database();
 function adduser() {
     user_name = document.getElementById("user_name").value;
     localStorage.setItem("user_name", user_name);
-    firebaseConfig.database().ref(user_name).push({
+    db.ref(user_name).push({
       User_name: user_name,
     });
     this.location = "room.html";
