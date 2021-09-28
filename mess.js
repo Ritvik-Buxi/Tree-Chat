@@ -74,3 +74,7 @@ function logout() {
   localStorage.removeItem("room_name");
   window.location.replace("index.html");
 }
+
+function back(){
+  window.location = "room.html";
+}
