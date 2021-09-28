@@ -33,7 +33,7 @@ function getData() {
         row =
           "<div class='room_name' id=" +
           Room_names +
-          " onclick='redirectToRoomName(this.id)' >#" +
+          " onclick='redirectToRoomName(this.id)' >" +
           Room_names +
           "</div><hr>";
         document.getElementById("output").innerHTML += row;
