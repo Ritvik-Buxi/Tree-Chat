@@ -11,7 +11,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 user_name = localStorage.getItem("user_name");
 room_name = localStorage.getItem("room_name_to");
-
 function send() {
   msg = document.getElementById("msg").value;
   firebase.database().ref(room_name).push({
@@ -21,7 +20,6 @@ function send() {
   });
   document.getElementById("msg").value = "";
 }
-
 function getData() {
   firebase.database().ref("/" + room_name).on("value", function (snapshot) {
       document.getElementById("output").innerHTML = "";
