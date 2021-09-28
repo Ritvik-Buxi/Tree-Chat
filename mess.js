@@ -8,9 +8,7 @@ var firebaseConfig = {
   messagingSenderId: "613108623407",
   appId: "1:613108623407:web:74d4726c4c8d4c16073eda",
 };
-
 firebase.initalizeApp(firebaseConfig);
-
 user_name = localStorage.getItem("user_name");
 room_name = localStorage.getItem("room_name_to");
 
