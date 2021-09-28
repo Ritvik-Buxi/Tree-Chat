@@ -20,7 +20,7 @@ function addRoom() {
 
   localStorage.setItem("room_name", room_name);
 
-  window.location = "kwitter_page.html";
+  window.location = "mess.html";
 }
 
 function getData() {
