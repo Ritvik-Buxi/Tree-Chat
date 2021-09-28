@@ -11,9 +11,11 @@ var firebaseConfig = {
 firebase.initalizeApp(firebaseConfig);
 user_name = localStorage.getItem("user_name");
 room_name = localStorage.getItem("room_name");
+sent_a = document.getElementById("aud_sen");
 
 function send() {
   msg = document.getElementById("msg").value;
+  sent_a.play();
   firebase.database().ref(room_name).push({
     name: user_name,
     message: msg,
