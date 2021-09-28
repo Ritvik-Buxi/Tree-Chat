@@ -8,11 +8,11 @@ var  firebaseConfig = {
   messagingSenderId: "613108623407",
   appId: "1:613108623407:web:74d4726c4c8d4c16073eda",
 };
-firebase.initalizeApp(fire)
+firebase.initalizeApp(firebaseConfig);
 user_name = localStorage.getItem("user_name");
 document.getElementById("user_name").innerHTML = "Welcome Back " + user_name;
 
-function addRoom() {
+function addroom() {
   room_name = document.getElementById("room_name").value;
 
   firebase.database().ref("/").child(room_name).update({
