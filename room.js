@@ -1,5 +1,5 @@
 //Firebase Database (Please Do not share this to anyone who is not a developer of this website);
-const firebaseConfig = {
+var  firebaseConfig = {
   apiKey: "AIzaSyABCnaN2CP7at_U_7c9XDxoGY7V_uEhl4Y",
   authDomain: "tree-chat-db.firebaseapp.com",
   databaseURL: "https://tree-chat-db-default-rtdb.firebaseio.com",
@@ -8,6 +8,7 @@ const firebaseConfig = {
   messagingSenderId: "613108623407",
   appId: "1:613108623407:web:74d4726c4c8d4c16073eda",
 };
+firebase.initalizeApp(fire)
 user_name = localStorage.getItem("user_name");
 document.getElementById("user_name").innerHTML = "Welcome Back " + user_name;
 
@@ -29,15 +30,14 @@ function getData() {
     snapshot.forEach(function (childSnapshot) {
       childKey = childSnapshot.key;
       Room_names = childKey;
-      //Start code
-      console.log("room name-" + Room_names);
+      console.log("Room Name - " + Room_names);
       row =
         "<div class='room_name' id=" +
         Room_names +
-        " onclick='redirectToRoomName(this.id)'> #" +
+        " onclick='redirectToRoomName(this.id)' >#" +
         Room_names +
         "</div><hr>";
-      document.getElementById("output").innerHTML = row;
+      document.getElementById("output").innerHTML += row;
     });
   });
 }
