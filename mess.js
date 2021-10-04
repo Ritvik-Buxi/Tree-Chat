@@ -35,8 +35,8 @@ function getData() {
           message = message_data["message"];
           like = message_data["like"];
           name_with_tag =
-            "<h4 class='m-5'> " +name+"</h4>";
-          message_with_tag = "<h4 class='message_h4 m-5'>" + message + "</h4>";
+            "<h4 class='m-5'> " +name+"</h4><hr>";
+          message_with_tag = "<h4 class='message_h4 m-5 capitalize text-break text-start display-3'>" + message + "</h4>";
           like_button =
             "<button class='btn btn-warning m-3' id=" +
             firebase_message_id +
