@@ -8,6 +8,7 @@ var firebaseConfig = {
   messagingSenderId: "613108623407",
   appId: "1:613108623407:web:74d4726c4c8d4c16073eda",
 };
+
 firebase.initializeApp(firebaseConfig);
 user_name = localStorage.getItem("user_name");
 room_name = localStorage.getItem("room_name_to");
@@ -54,8 +55,13 @@ function getData() {
       });
     });
 }
-
+console.log("call back msg");
 getData();
+
+
+var chage = document.getElementById("msgsin");
+chage.innerHTML = "Your Message Will Be Sent In " + room_name;
+
 
 function updateLike(message_id) {
   console.log("clicked on like button - " + message_id);
@@ -78,3 +84,7 @@ function logout() {
 function back(){
   window.location = "room.html";
 }
+
+console.log("call back msg");
+console.log("the whole js file complete");
+console.log("developer - Ritvik Buxi");
